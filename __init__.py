@@ -148,8 +148,8 @@ def plotLevels(L,A,Q,nq,P,E):
   #Decoración
   ax.set_xlim((0,width))
   ax.set_ylim((0,width))
-  #ax.set_axis_off();
-  ax.grid()
+  ax.set_axis_off();
+  #ax.grid()
   fig.tight_layout();
   plt.close(fig)
 
