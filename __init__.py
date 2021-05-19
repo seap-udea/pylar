@@ -69,7 +69,7 @@ def massConservation(solution):
   #Comparte
   input=nqint-Qint
   stored=Ls[-1]+As[-1]
-  dmass=total-input
+  dmass=stored-input
 
   return nqint,Qint,input,stored,dmass
 
