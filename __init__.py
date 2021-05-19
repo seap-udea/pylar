@@ -369,4 +369,4 @@ def plotSolution(ts,nqs,Ls,As,Qs,Ps,Es,ini=0,end=0):
       ax.set_xlim((min(ts),max(ts)))
 
   fig.tight_layout()
-  return fig
+  return fig,axs
