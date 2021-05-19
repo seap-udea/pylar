@@ -55,15 +55,15 @@ def solveLAR(S0,tini,tend,Nt,vfuns,h=0.01):
   
   return ts,Ls,As,nqs,Qs,Ps,Es
 
-def massConservation(ts,Ls,As,nqs,Qs,Ps,Es,kind='cubic'):
+def massConservation(ts,Ls,As,nqs,Qs,Ps,Es,kind='cubic',tol=1e-7):
 
   #Interpolate solution
   nqfun=interp1d(ts,nqs,kind=kind)
   Qfun=interp1d(ts,Qs,kind=kind)
 
   #Integrate
-  Qint,err=quad(Qfun,ts[0],ts[-1],epsrel=1e-7)
-  nqint,err=quad(nqfun,ts[0],ts[-1],epsrel=1e-7)
+  Qint,err=quad(Qfun,ts[0],ts[-1],epsrel=tol)
+  nqint,err=quad(nqfun,ts[0],ts[-1],epsrel=tol)
 
   #Comparte
   input=nqint-Qint
