@@ -7,6 +7,71 @@ rc("animation",html="jshtml")
 from matplotlib.patches import Rectangle
 import warnings
 warnings.filterwarnings("ignore")
+from scipy.interpolate import interp1d
+from scipy.integrate import quad 
+
+#############################################
+#PHYSICAL ROUTINES
+#############################################
+def toyLAR(fs,t,*vfuns):
+  
+  #Storages
+  L=fs[0]
+  A=fs[1]
+
+  #Valves
+  nqfun,Pfun,Efun,Qfun=vfuns
+  nq=nqfun(t,L,A)
+  P=Pfun(t,L,A)
+  E=Efun(t,L,A)
+  Q=Qfun(t,L,A)
+
+  #Rates
+  dLdt=P-E-Q
+  dAdt=-P+E+nq
+
+  return np.array([dLdt,dAdt])
+
+def solveLAR(S0,tini,tend,Nt,vfuns,h=0.01):
+  
+  #Sampling times
+  ts=np.linspace(tini,tend,Nt)
+  
+  #Solution
+  solution=odeint(toyLAR,S0,ts,h0=h,args=vfuns)
+
+  #Extract solutions
+  Ls=solution[:,0]
+  As=solution[:,1]
+
+  #Functions
+  nqfun,Pfun,Efun,Qfun=vfuns
+
+  #Value variables
+  nqs=nqfun(ts,Ls,As)
+  Qs=Qfun(ts,Ls,As)
+  Ps=Pfun(ts,Ls,As)
+  Es=Efun(ts,Ls,As)
+  
+  return ts,Ls,As,nqs,Qs,Ps,Es
+
+def massConservation(solution):
+  ts,Ls,As,nqs,Qs,Ps,Es=solution
+
+  #Interpolate solution
+  nqfun=interp1d(ts,nqs,kind='cubic')
+  Qfun=interp1d(ts,Qs,kind='cubic')
+
+  #Integrate
+  Qint,err=quad(Qfun,ts[0],ts[-1],epsrel=1e-7)
+  nqint,err=quad(nqfun,ts[0],ts[-1],epsrel=1e-7)
+
+  #Comparte
+  input=nqint-Qint
+  stored=Ls[-1]+As[-1]
+  dmass=total-input
+
+  return nqint,Qint,input,stored,dmass
 
 #############################################
 #GRAPHICAL PARAMETERS
@@ -246,28 +311,6 @@ def animateLAR(ts,nqs,Ls,As,Qs,Ps,Es,it=-1):
     animacion(it)
     return fig
 
-#############################################
-#PHYSICAL ROUTINES
-#############################################
-def toyLAR(fs,t,*vfuns):
-  
-  #Storages
-  L=fs[0]
-  A=fs[1]
-
-  #Valves
-  nqfun,Pfun,Efun,Qfun=vfuns
-  nq=nqfun(t,L,A)
-  P=Pfun(t,L,A)
-  E=Efun(t,L,A)
-  Q=Qfun(t,L,A)
-
-  #Rates
-  dLdt=P-E-Q
-  dAdt=-P+E+nq
-
-  return np.array([dLdt,dAdt])
-
 def plotSolution(ts,nqs,Ls,As,Qs,Ps,Es,ini=0,end=0):
 
   #Slice vector
@@ -327,26 +370,3 @@ def plotSolution(ts,nqs,Ls,As,Qs,Ps,Es,ini=0,end=0):
       ax.set_xlim((min(ts),max(ts)))
 
   fig.tight_layout()
-
-def solveLAR(S0,tini,tend,Nt,vfuns,h=0.01):
-  
-  #Sampling times
-  ts=np.linspace(tini,tend,Nt)
-  
-  #Solution
-  solution=odeint(toyLAR,S0,ts,h0=h,args=vfuns)
-
-  #Extract solutions
-  Ls=solution[:,0]
-  As=solution[:,1]
-
-  #Functions
-  nqfun,Pfun,Efun,Qfun=vfuns
-
-  #Value variables
-  nqs=nqfun(ts,Ls,As)
-  Qs=Qfun(ts,Ls,As)
-  Ps=Pfun(ts,Ls,As)
-  Es=Efun(ts,Ls,As)
-  
-  return ts,Ls,As,nqs,Qs,Ps,Es
