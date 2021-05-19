@@ -55,7 +55,7 @@ def solveLAR(S0,tini,tend,Nt,vfuns,h=0.01):
   
   return ts,Ls,As,nqs,Qs,Ps,Es
 
-def massConservation(ts,Ls,As,nqs,Qs,Ps,Es,kind='cubic',tol=1e-7):
+def massConservation(ts,Ls,As,nqs,Qs,Ps,Es,kind='cubic',tol=1e-7,epsabs=0):
 
   #Interpolate solution
   nqfun=interp1d(ts,nqs,kind=kind)
