@@ -55,12 +55,12 @@ def solveLAR(S0,tini,tend,Nt,vfuns,h=0.01):
   
   return ts,Ls,As,nqs,Qs,Ps,Es
 
-def massConservation(*solution):
+def massConservation(*solution,kind='cubic'):
   ts,Ls,As,nqs,Qs,Ps,Es=solution
 
   #Interpolate solution
-  nqfun=interp1d(ts,nqs,kind='cubic')
-  Qfun=interp1d(ts,Qs,kind='cubic')
+  nqfun=interp1d(ts,nqs,kind=kind)
+  Qfun=interp1d(ts,Qs,kind=kind)
 
   #Integrate
   Qint,err=quad(Qfun,ts[0],ts[-1],epsrel=1e-7)
