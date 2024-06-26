@@ -55,8 +55,8 @@ cleandist:
 	@-rm -rf $(PACKNAME)-*/
 	
 cleandata:
-	@echo "Cleaning all downloaded kernels..."
-	@rm -rf src/$(PACKNAME)/data/[a-z]*.*
+	@echo "Cleaning all downloaded data..."
+	@rm -rf src/tmp/data/[a-z]*.*
 
 ##################################################################
 #GIT
