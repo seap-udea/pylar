@@ -5,7 +5,6 @@ __pycache__
 .anim*
 env/
 dist/
-src/
 build/
 *.bak
 *.pyf
