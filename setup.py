@@ -17,7 +17,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://pypi.org/project/ipylar",
-    keywords='hydrology climate change',
+    keywords='hydrology, climate change',
     license='MIT',
 
     # ######################################################################

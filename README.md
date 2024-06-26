@@ -15,11 +15,11 @@
 </a>
 -->
 
-`PyLAR` is a python package and datasets intended to test and use the LAR (Land Atmospheric and Reservoir) model. The LAR model is intended to describe the changes in the water storage in large river basin around the world, including
+`PyLAR` is a python package and datasets intended to test and use the LAR (Land-Atmospheric and Reservoir) model. The LAR model is intended to describe the changes in the water storage in large river basin around the world, including
 atmospheric processes as a critical component of the basin
 water budget. 
 
-<p align="center"><img src="https://github.com/seap-udea/pylar/blob/main/tutorial/resources/LAR-Conceptual.png?raw=true" alt="Conceptual illustration of LAR"/></p>
+<p align="center"><img src="https://github.com/seap-udea/pylar/blob/main/tutorials/resources/LAR-Conceptual.png?raw=true" alt="Conceptual illustration of LAR"/></p>
 
 For the science behind the LAR model please refer to the following paper:
 
