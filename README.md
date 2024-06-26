@@ -19,6 +19,8 @@
 atmospheric processes as a critical component of the basin
 water budget. 
 
+<p align="center"><img src="https://github.com/seap-udea/pylar/blob/main/tutorial/resources/LAR-Conceptual.png?raw=true" alt="Conceptual illustration of LAR"/></p>
+
 For the science behind the LAR model please refer to the following paper:
 
 > Juan F. Salazar, Rubén D. Molina, Jorge I. Zuluaga, and Jesus D. Gomez-Velez (2024), **Wetting and drying trends in the land–atmosphere reservoir of large basins around the world**, [Hydrology and Earth System Sciences, in publication (2024)](https://hess.copernicus.org/preprints/hess-2023-172/), [doi.org/10.5194/hess-2023-172](https://doi.org/10.5194/hess-2023-172).
