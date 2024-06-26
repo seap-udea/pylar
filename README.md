@@ -23,7 +23,7 @@ For the science behind the LAR model please refer to the following paper:
 
 > Juan F. Salazar, Rubén D. Molina, Jorge I. Zuluaga, and Jesus D. Gomez-Velez (2024), **Wetting and drying trends in the land–atmosphere reservoir of large basins around the world**, [Hydrology and Earth System Sciences, in publication (2024)](https://hess.copernicus.org/preprints/hess-2023-172/), [doi.org/10.5194/hess-2023-172](https://doi.org/10.5194/hess-2023-172).
 
-All the notebooks and data required to reproduce the results of this paper, and other papers produced by our group, are available in the [`dev` directory in this repository](https://github.com/seap-udea/pylar/tree/main/dev).
+All the notebooks and data required to reproduce the results of this paper, and other papers produced by our group, are available in the `dev` directory in this repository. [Link](https://github.com/seap-udea/pylar/tree/main/dev).
 
 ## Downloading and Installing `PyLAR` 
 
