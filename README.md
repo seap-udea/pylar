@@ -7,7 +7,7 @@
 [![license](https://img.shields.io/pypi/l/ipylar)](https://pypi.org/project/ipylar/)
 [![implementation](https://img.shields.io/pypi/implementation/ipylar)](https://pypi.org/project/ipylar/)
 [![pythonver](https://img.shields.io/pypi/pyversions/ipylar)](https://pypi.org/project/ipylar/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12167662.svg)](https://doi.org/10.5281/zenodo.12167662)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12167661.svg)](https://doi.org/10.5281/zenodo.12167661)
 
 <!--
 <a target="_blank" href="https://colab.research.google.com/github/seap-udea/fargopy/blob/main/README.ipynb">
