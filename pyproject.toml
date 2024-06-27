@@ -1,5 +1,4 @@
 [build-system]
 requires=['setuptools',
-	  'matplotlib','mpmath','sympy','scikit-learn',
-	  'openpyxl','statsmodels','ipywidgets','pandas']
+	  	  'matplotlib','pandas']
 build-backend = "setuptools.build_meta"

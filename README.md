@@ -11,13 +11,6 @@
 [![DOI](https://img.shields.io/badge/10.5194%2Fhess-2023-172)](https://doi.org/10.5194/hess-2023-172)
 <!-- Static badge generator: https://shields.io/badges/static-badge: put the badge number and ready -->
 
-
-<!--
-<a target="_blank" href="https://colab.research.google.com/github/seap-udea/fargopy/blob/main/README.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
--->
-
 `PyLAR` is a python package and datasets intended to test and use the LAR (Land-Atmospheric and Reservoir) model. The LAR model is intended to describe the changes in the water storage in large river basin around the world, including
 atmospheric processes as a critical component of the basin
 water budget. 

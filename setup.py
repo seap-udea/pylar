@@ -52,8 +52,8 @@ setuptools.setup(
     # ######################################################################
     # DEPENDENCIES
     # ######################################################################
-    install_requires=['matplotlib','mpmath','sympy','scikit-learn',
-                      'openpyxl','statsmodels','ipywidgets','pandas'],
+    install_requires=['matplotlib','pandas']
+    # 'mpmath','sympy','scikit-learn','openpyxl','statsmodels','ipywidgets'
 
     # ######################################################################
     # OPTIONS
