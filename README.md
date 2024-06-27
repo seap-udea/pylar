@@ -54,6 +54,10 @@ You can load the data using:
 $ amazonas = lar.Basin('amazonas')
 ```
 
+## Tutorials
+
+We have prepared a set of [basic tutorials](https://github.com/seap-udea/pylar/tree/main/tutorials) for illustrating the usage of some of the tools including in `PyLAR`. The tutorials can be ran in `Google Colab`. 
+
 ## What's new
 
 For a detailed list of the newest characteristics of the code see the file [What's new](https://github.com/seap-udea/pylar/blob/master/WHATSNEW.md).

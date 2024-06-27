@@ -46,6 +46,7 @@ cleanout:
 	@-find . -name "*.out" -delete
 	@-find . -name "*.tout" -delete
 	@-find . -name "*.so" -delete
+	@-find . -name "desktop.ini" -delete
 	@-find . -name ".ipynb_checkpoints" -type d | xargs rm -fr
 	@-find . -name "__pycache__" -type d | xargs rm -fr
 
