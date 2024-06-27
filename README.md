@@ -8,6 +8,9 @@
 [![implementation](https://img.shields.io/pypi/implementation/ipylar)](https://pypi.org/project/ipylar/)
 [![pythonver](https://img.shields.io/pypi/pyversions/ipylar)](https://pypi.org/project/ipylar/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12167661.svg)](https://doi.org/10.5281/zenodo.12167661)
+[![DOI](https://img.shields.io/badge/10.5194%2Fhess-2023-172)](https://doi.org/10.5194/hess-2023-172)
+<!-- Static badge generator: https://shields.io/badges/static-badge: put the badge number and ready -->
+
 
 <!--
 <a target="_blank" href="https://colab.research.google.com/github/seap-udea/fargopy/blob/main/README.ipynb">
@@ -45,18 +48,32 @@ To start using `PyLAR`, you should first obtain data for a large river basin. We
 You must start by importing the package:
 
 ```python
-$ import ipylar as lar
+import ipylar as lar
 ```
 
-You can load the data using:
+Create a basin:
 
 ```python
-$ amazonas = lar.Basin('amazonas')
+amazonas = lar.Basin(key='amazonas',name='Amazonas')
 ```
+
+Once created, you should read the timeseries for the basin and load it into the pandas dataframe `amazonas.data`. The present version of `PyLAR` includes sample data. You may read the sample data using:
+
+```python
+amazonas.read_basin_data()
+```
+
+Once the data is loaded you can perform operations on the data, for instance, you can plot it:
+
+```python
+fig = amazonas.plot_basin_series()
+```
+
+<p align="center"><img src="https://github.com/seap-udea/pylar/blob/main/tutorials/resources/amazonas-lar-timeseries.png?raw=true" alt="Amazonas LAR time-series"/></p>
 
 ## Tutorials
 
-We have prepared a set of [basic tutorials](https://github.com/seap-udea/pylar/tree/main/tutorials) for illustrating the usage of some of the tools including in `PyLAR`. The tutorials can be ran in `Google Colab`. 
+We have prepared a set of [basic tutorials](https://github.com/seap-udea/pylar/tree/main/tutorials) for illustrating the usage of some of the tools including in `PyLAR`. The tutorials can be ran in `Google Colab`.
 
 ## What's new
 
