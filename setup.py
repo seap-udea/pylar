@@ -28,7 +28,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         ],
-    version='1.0.3',
+    version='1.0.4',
 
     # ######################################################################
     # FILES
@@ -52,7 +52,7 @@ setuptools.setup(
     # ######################################################################
     # DEPENDENCIES
     # ######################################################################
-    install_requires=['matplotlib','pandas']
+    install_requires=['matplotlib','pandas'],
     # 'mpmath','sympy','scikit-learn','openpyxl','statsmodels','ipywidgets'
 
     # ######################################################################
