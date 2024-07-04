@@ -9,6 +9,8 @@
 [![pythonver](https://img.shields.io/pypi/pyversions/ipylar)](https://pypi.org/project/ipylar/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12167661.svg)](https://doi.org/10.5281/zenodo.12167661)
 [![DOI](https://img.shields.io/badge/10.5194%2Fhess-2023-172)](https://doi.org/10.5194/hess-2023-172)
+[![DOI](https://img.shields.io/badge/10.5194%2Fhess-28-2919-2024
+)](https://doi.org/10.5194/hess-28-2919-2024)
 <!-- Static badge generator: https://shields.io/badges/static-badge: put the badge number and ready -->
 
 `PyLAR` is a python package and datasets intended to test and use the LAR (Land-Atmospheric and Reservoir) model. The LAR model is intended to describe the changes in the water storage in large river basin around the world, including
@@ -19,7 +21,7 @@ water budget.
 
 For the science behind the LAR model please refer to the following paper:
 
-> Juan F. Salazar, Rubén D. Molina, Jorge I. Zuluaga, and Jesus D. Gomez-Velez (2024), **Wetting and drying trends in the land–atmosphere reservoir of large basins around the world**, [Hydrology and Earth System Sciences, in publication (2024)](https://hess.copernicus.org/preprints/hess-2023-172/), [doi.org/10.5194/hess-2023-172](https://doi.org/10.5194/hess-2023-172).
+> Juan F. Salazar, Rubén D. Molina, Jorge I. Zuluaga, and Jesus D. Gomez-Velez (2024), **Wetting and drying trends in the land–atmosphere reservoir of large basins around the world**, [Hydrology and Earth System Sciences, HESS, 28, 2919–2947, 2024](https://hess.copernicus.org/articles/28/2919/2024/), [doi.org/10.5194/hess-28-2919-2024](https://doi.org/10.5194/hess-28-2919-2024).
 
 All the notebooks and data required to reproduce the results of this paper, and other papers produced by our group, are available in the [`dev` directory in this repository](https://github.com/seap-udea/pylar/tree/main/dev).
 
