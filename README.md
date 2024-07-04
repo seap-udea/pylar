@@ -8,9 +8,9 @@
 [![implementation](https://img.shields.io/pypi/implementation/ipylar)](https://pypi.org/project/ipylar/)
 [![pythonver](https://img.shields.io/pypi/pyversions/ipylar)](https://pypi.org/project/ipylar/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12167661.svg)](https://doi.org/10.5281/zenodo.12167661)
-[![DOI](https://img.shields.io/badge/10.5194%2Fhess-2023-172)](https://doi.org/10.5194/hess-2023-172)
-[![DOI](https://img.shields.io/badge/10.5194%2Fhess-28-2919-2024
-)](https://doi.org/10.5194/hess-28-2919-2024)
+[![DOI](https://img.shields.io/badge/10.5194%2Fhess-2023-172)](https://doi.org/10.5194/hess-28-2919-2024)
+<!--[![DOI](https://img.shields.io/badge/10.5194%2Fhess-28-2919-2024
+)](https://doi.org/10.5194/hess-28-2919-2024)-->
 <!-- Static badge generator: https://shields.io/badges/static-badge: put the badge number and ready -->
 
 `PyLAR` is a python package and datasets intended to test and use the LAR (Land-Atmospheric and Reservoir) model. The LAR model is intended to describe the changes in the water storage in large river basin around the world, including
